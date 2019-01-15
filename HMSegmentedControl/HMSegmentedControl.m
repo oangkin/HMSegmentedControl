@@ -157,6 +157,7 @@
     self.selectionIndicatorBoxLayer = [CALayer layer];
     self.selectionIndicatorBoxLayer.opacity = self.selectionIndicatorBoxOpacity;
     self.selectionIndicatorBoxLayer.borderWidth = 1.0f;
+    self.selectionIndicatorBoxLayer.cornerRadius = self.selectionIndicatorBoxRadious;
     self.selectionIndicatorBoxOpacity = 0.2;
     
     self.contentMode = UIViewContentModeRedraw;
@@ -200,6 +201,11 @@
     _selectionIndicatorBoxOpacity = selectionIndicatorBoxOpacity;
     
     self.selectionIndicatorBoxLayer.opacity = _selectionIndicatorBoxOpacity;
+}
+
+- (void)setSelectionIndicatorBoxRadious:(CGFloat)selectionIndicatorBoxRadious {
+    _selectionIndicatorBoxRadious = selectionIndicatorBoxRadious;
+     self.selectionIndicatorBoxLayer.cornerRadius = _selectionIndicatorBoxRadious;
 }
 
 - (void)setSegmentWidthStyle:(HMSegmentedControlSegmentWidthStyle)segmentWidthStyle {

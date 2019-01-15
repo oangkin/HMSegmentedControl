@@ -111,6 +111,13 @@ typedef NS_ENUM(NSInteger, HMSegmentedControlImagePosition) {
 @property (nonatomic, strong) UIColor *selectionIndicatorBoxColor UI_APPEARANCE_SELECTOR;
 
 /**
+ Radious for the selection indicator box
+ 
+ Default is 0
+ */
+@property (nonatomic, assign) CGFloat selectionIndicatorBoxRadious;
+
+/**
  Color for the vertical divider between segments.
  
  Default is `[UIColor blackColor]`
